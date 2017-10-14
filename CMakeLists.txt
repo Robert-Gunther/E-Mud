@@ -7,6 +7,8 @@ project(MockServer)
 
 enable_language(CXX)
 
+set(CXX_STANDARD 11)
+
 set(VERSION_MAJOR 1)
 set(VERSION_MINOR 0)
 set(VERSION_PATCH 0)
@@ -35,10 +37,6 @@ if(CMAKE_CXX_COMPILER_ID MATCHES GNU)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs -ftest-coverage")
 endif()
 
-include_directories(
-    ${PROJECT_BINARY_DIR}    
-    ${CMAKE_CURRENT_SOURCE_DIR}/include)
-
 include(git_revision)
 
 configure_file(
@@ -46,6 +44,16 @@ configure_file(
     ${PROJECT_BINARY_DIR}/config.h
 )
 
-set(SOURCE_FILES src/main.cpp)
+set(Boost_USE_STATIC_LIBS ON)
+find_package(Boost REQUIRED COMPONENTS system)
+
+include_directories(
+    ${PROJECT_BINARY_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${Boost_INCLUDE_DIR})
+
+set(SOURCE_FILES src/main.cpp
+                 src/server.cpp include/server.h)
 
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+target_link_libraries(${PROJECT_NAME} ${Boost_SYSTEM_LIBRARY})
