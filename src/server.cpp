@@ -26,6 +26,7 @@ void Session::begin_read()
         {
            if(!ec) {
                // TODO: Properly read a packet from the stream rather than expecting it to be one continuous chunk of data.
+               // Put a NULL byte at the end of the data received, and write back to the client.
                m_data[length] = 0;
                std::cout << "Received: " << m_data << std::endl;
                write("Thank you for your contribution!");
@@ -55,6 +56,8 @@ void Server::begin_accept()
     {
         std::cout << "Waiting for connection" << std::endl;
         if(!ec) {
+            // No error code was brought up, so let's start a new session for the socket
+            // and start accepting again.
             std::make_shared<Session>(std::move(m_socket))->start();
             begin_accept();
         } else {
