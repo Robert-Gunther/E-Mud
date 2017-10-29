@@ -1,0 +1,4 @@
+F:\ConcordCourses\Fall 2017\Software Engineering\EMudEntityCreationMenus\EMudEntityCreationMenus\bin\Debug\EMudEntityCreationMenus.exe
+F:\ConcordCourses\Fall 2017\Software Engineering\EMudEntityCreationMenus\EMudEntityCreationMenus\bin\Debug\EMudEntityCreationMenus.pdb
+F:\ConcordCourses\Fall 2017\Software Engineering\EMudEntityCreationMenus\EMudEntityCreationMenus\obj\x86\Debug\EMudEntityCreationMenus.exe
+F:\ConcordCourses\Fall 2017\Software Engineering\EMudEntityCreationMenus\EMudEntityCreationMenus\obj\x86\Debug\EMudEntityCreationMenus.pdb
