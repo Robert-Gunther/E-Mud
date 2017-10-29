@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{A312098D-5220-4B12-97C1-D434969995D9}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.EMudEntityCreationMenus PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EMudEntityCreationMenus\ItemCreation.cs">
+    <Files>
+      <File FileName="EMudEntityCreationMenus\Program.cs" Line="25" Column="48" />
+      <File FileName="EMudEntityCreationMenus\CreatureCreation.cs" Line="186" Column="5" />
+      <File FileName="EMudEntityCreationMenus\ItemCreation.cs" Line="3" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
